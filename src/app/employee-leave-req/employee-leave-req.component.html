@@ -1,0 +1,57 @@
+<div id="leave-req-page">
+    <div id="sidebar">
+      <div id="logo">
+        <img
+          src="assets\hiring-agency-candidates-job-interview_1262-18940.jpg"
+          alt="emp-image"
+        />
+      </div>
+  
+      <div class="elements">
+        <div>
+          <i class="ri-computer-line"></i>
+          <a routerLink="/home">Dashboard</a>
+        </div>
+        <div>
+          <i class="ri-mail-open-line"></i>
+          <a href="#">my leave request </a>
+        </div>
+        <div>
+          <i class="ri-arrow-right-up-line"></i>
+          <a href="#">my leave balance</a>
+        </div>
+        <div>
+          <i class="ri-money-dollar-circle-line"></i>
+          <a>salary</a>
+        </div>
+        <div>
+          <i class="ri-user-unfollow-line"></i>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </div>
+    <div id="show-req-main">
+      <div class="header-req row mt-3">
+          <div class="col-2">
+              <button class="btn btn-primary" (click)="makeReq()">Make request</button>
+          </div>
+      </div>
+      <div *ngIf="flag" id="makReq">
+        <input type="text" class="form-control"  placeholder="Employee_id"/>
+        <input type="text" class="form-control" placeholder="topic"/>
+        <input type="text" class="form-control" placeholder="date"/>
+        <button class="btn btn-primary" (click)="makeReq()">Submit</button>
+      </div>
+      <div class="request-lists">
+          <div class="row requests"  *ngFor="let r of reqArr">
+              <div class="col">
+                  {{ r.Employee_id }}
+              </div>
+              <div class="col">
+                  {{ r.req_type }}
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  

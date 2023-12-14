@@ -1,0 +1,24 @@
+<div id="login-main">
+    <div id="container">
+        <div class="form mydiv" [formGroup]="loginForm">
+            <div id="heading">Sign In</div>
+            <input type="text" formControlName="Username" placeholder="username"/>
+            <input type="text" formControlName="Password"placeholder="Password"/>
+            <span class="forgot-password"><a href="#">Forgot Password ?</a></span>
+            <input class="login-button" type="submit" (click)="login()" value="Sign In"/>
+        </div>
+    </div>
+</div>
+
+<!-- <body>
+    <div class="container">
+        <div class="heading">Sign In</div>
+        <div class="form" [formGroup]="loginForm" >
+          <input required="" class="input" type="username" name="username" id="username" placeholder="username" formControlName="Username" type="text" formControlName="Username"/>
+          <input required="" class="input" type="password" name="password" id="password" placeholder="Password" formControlName="Password"type="text" formControlName="Password"/>
+          <span class="forgot-password"><a href="#">Forgot Password ?</a></span>
+          <input class="login-button" type="submit" (click)="login()" value="Sign In"/>
+         
+        </div>
+      </div>
+</body> -->

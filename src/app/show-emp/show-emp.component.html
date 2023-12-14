@@ -1,0 +1,46 @@
+<div id="leave-req-page">
+    <div id="sidebar">
+      <div id="logo">
+        <img
+          src="assets\hiring-agency-candidates-job-interview_1262-18940.jpg"
+          alt="emp-image"
+        />
+      </div>
+  
+      <div class="elements">
+        <div>
+          <i class="ri-computer-line"></i>
+          <a routerLink="/home">Dashboard</a>
+        </div>
+        <div>
+          <i class="ri-mail-open-line"></i>
+          <a href="#">my leave request </a>
+        </div>
+        <div>
+          <i class="ri-arrow-right-up-line"></i>
+          <a href="#">my leave balance</a>
+        </div>
+        <div>
+          <i class="ri-money-dollar-circle-line"></i>
+          <a>salary</a>
+        </div>
+        <div>
+          <i class="ri-user-unfollow-line"></i>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </div>
+    <div id="show-req-main">
+      <div class="request-lists">
+          <div class="row requests"  *ngFor="let r of arr">
+              <div class="col">
+                  {{ r.emp_id }}
+              </div>
+              <div class="col">
+                  {{ r.name }}
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
